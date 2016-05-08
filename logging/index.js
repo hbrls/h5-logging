@@ -4,7 +4,7 @@
     this.src = src + '?';
   };
   Logging.prototype.log = function (message) {
-    var src = this.src + message;
+    var src = this.src + '&t=' + +new Date() + '&' + message;
     setTimeout(function () {
       var img = new Image();
       img.onload = img.onerror = function () {
