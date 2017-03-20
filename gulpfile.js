@@ -3,22 +3,13 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 
 
-gulp.task('analytics', function () {
+gulp.task('dist', function () {
   return gulp
-    .src('./analytics/index.js')
-    .pipe(uglify())
-    .pipe(rename('h5-analytics.min.js'))
-    .pipe(gulp.dest('./analytics'));
-});
-
-
-gulp.task('logging', function () {
-  return gulp
-    .src('./logging/index.js')
-    .pipe(uglify())
+    .src('./lib/index.js')
+    .pipe(uglify({
+      compress: { drop_console: true },
+      output: { max_line_len: 80 },
+    }))
     .pipe(rename('h5-logging.min.js'))
-    .pipe(gulp.dest('./logging'));
+    .pipe(gulp.dest('./dist'));
 });
-
-
-gulp.task('default', ['analytics', 'logging']);

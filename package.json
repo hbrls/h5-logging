@@ -1,8 +1,8 @@
 {
   "name": "h5-logging",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
-  "main": "logging/h5-logging.min.js",
+  "main": "dist/h5-logging.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,15 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/hbrls/h5-logging.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hbrls/h5-logging/issues"
-  },
-  "homepage": "https://github.com/hbrls/h5-logging#readme",
+  "author": "hbrls",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "3.9.1",
     "gulp-rename": "1.2.2",
-    "gulp-uglify": "1.5.3"
+    "gulp-uglify": "2.1.1"
   }
 }
